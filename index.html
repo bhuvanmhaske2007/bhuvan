@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header>
+    <h1>
+        Emerging Technologies in Mechanical Engineering Website – Problem: Students lack awareness of modern technologies. Task: Develop a website explaining robotics, automation, and 3D printing.
+    </h1>
+    <h3> CIA actvity under the subject IT for engineers lab Dept- 0f mechanical engineering SCOE <br>
+    guided by Sonam Gujrathi</h3>
+</header>
+
+<!-- Image Slider -->
+<!-- Clickable Image Slider -->
+<div class="slider">
+    <a id="imgLink" href="robotics.html">
+        <img id="slide" src="ai.jpg" alt="Robotics Slider Image">
+    </a>
+</div>
+
+<section>
+    <p>Explore the world of Mechanical Engineering </p>
+    <a href="info.html" class="btn">Explore Now</a>
+
+</section>
+
+<script>
+    const slides = [
+        { img: "ai.jpg", link: "machine.html" },
+        { img: "robo.jpg", link: "robotics.html" },
+        { img: "3d.jpg", link: "3d.html" },
+    ];
+
+    let index = 0;
+
+    const slide = document.getElementById("slide");
+    const imgLink = document.getElementById("imgLink");
+
+    function changeImage() {
+        index = (index + 1) % slides.length;
+
+        slide.src = slides[index].img;
+        imgLink.href = slides[index].link;
+    }
+
+    setInterval(changeImage, 2500);
+</script>
+
+</body>
+</html>

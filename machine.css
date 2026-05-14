@@ -1,0 +1,106 @@
+/* Page background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #e1bee7);
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    animation: slideDown 1s ease;
+}
+
+/* Main section */
+.simple {
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    animation: fadeIn 1.2s ease;
+}
+
+/* Image styling */
+.simple img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 15px 0;
+    transition: 0.3s ease;
+}
+
+/* Image hover effect */
+.simple img:hover {
+    transform: scale(1.05);
+}
+
+/* Paragraph */
+.simple p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    text-align: justify;
+}
+
+/* YouTube link styling */
+.simple a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* YouTube button style */
+.simple a[href*="youtu"] {
+    background: red;
+    color: white;
+}
+
+.simple a[href*="youtu"]:hover {
+    background: darkred;
+    transform: scale(1.1);
+}
+
+/* Back link style */
+.simple a[href="index.html"] {
+    background: #2c3e50;
+    color: white;
+}
+
+.simple a[href="index.html"]:hover {
+    background: #3498db;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
